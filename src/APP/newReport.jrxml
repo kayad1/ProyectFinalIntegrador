@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b803df8d-44b5-486d-8c92-47f7387a862a">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     matricula.`codigo_m` AS matricula_codigo_m,
+     matricula.`nombre_a_m` AS matricula_nombre_a_m,
+     matricula.`dni_a_m` AS matricula_dni_a_m,
+     agregar_alumnos.`apellido_a` AS agregar_alumnos_apellido_a,
+     agregar_alumnos.`dni_a` AS agregar_alumnos_dni_a,
+     agregar_alumnos.`nombre_a` AS agregar_alumnos_nombre_a,
+     agregar_alumnos.`distrito_a` AS agregar_alumnos_distrito_a,
+     agregar_alumnos.`direccion_a` AS agregar_alumnos_direccion_a,
+     agregar_alumnos.`genero_a` AS agregar_alumnos_genero_a,
+     agregar_alumnos.`telefono_a` AS agregar_alumnos_telefono_a,
+     agregar_alumnos.`año_lecitovo_a` AS agregar_alumnos_año_lecitovo_a,
+     matricula.`apellido_a_m` AS matricula_apellido_a_m,
+     matricula.`grado_electivo_m` AS matricula_grado_electivo_m,
+     matricula.`estado_m` AS matricula_estado_m,
+     matricula.`nombre_m_m` AS matricula_nombre_m_m,
+     matricula.`nombre_p_m` AS matricula_nombre_p_m
+FROM
+     `matricula` matricula INNER JOIN `agregar_alumnos` agregar_alumnos ON matricula.`nombre_a_m` = agregar_alumnos.`nombre_a`
+     AND matricula.`apellido_a_m` = agregar_alumnos.`apellido_a`]]>
+	</queryString>
+	<field name="matricula_codigo_m" class="java.lang.Integer"/>
+	<field name="matricula_nombre_a_m" class="java.lang.String"/>
+	<field name="matricula_dni_a_m" class="java.lang.Integer"/>
+	<field name="agregar_alumnos_apellido_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_dni_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_nombre_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_distrito_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_direccion_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_genero_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_telefono_a" class="java.lang.String"/>
+	<field name="agregar_alumnos_año_lecitovo_a" class="java.lang.String"/>
+	<field name="matricula_apellido_a_m" class="java.lang.String"/>
+	<field name="matricula_grado_electivo_m" class="java.lang.String"/>
+	<field name="matricula_estado_m" class="java.lang.String"/>
+	<field name="matricula_nombre_m_m" class="java.lang.String"/>
+	<field name="matricula_nombre_p_m" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="109" y="27" width="326" height="33" uuid="98837817-1dd5-4579-81e1-c9d56a22fbd4"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[MATRICULA FE Y ALEGRIA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="13" width="69" height="66" uuid="606ba42b-3df4-4e21-bed3-a04197d6011a"/>
+				<imageExpression><![CDATA["D:\\zzz\\PROYECTO FINAL\\AVANCE_100--main\\src\\Imagenes\\fee.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="e7eb4d08-260d-40bd-91e8-fb326e0531e9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="38" width="555" height="1" uuid="c8be6985-8213-42a7-a240-9f3476d02519"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="18" width="330" height="20" uuid="a5ecc153-e5e4-4bde-86c9-84b4c9e8b89d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[PROCESO DE MATRICULA AÑO 2023]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="191" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="69" height="20" uuid="d77c2fae-37fb-48a6-b4a4-f7bf3d56ce1c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nombres:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="69" height="20" uuid="51af31fc-945b-4bd2-9470-7a4616416564"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Apellido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="f3d7a86c-e514-4e84-8b0e-9c1cfc93769e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alumno]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="21" width="328" height="20" uuid="c030f04d-fd7d-4b50-b064-c30c4db096c9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agregar_alumnos_nombre_a}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="41" width="328" height="20" uuid="23502b08-4427-4730-ba65-cfe9c2443191"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agregar_alumnos_apellido_a}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="61" width="69" height="20" uuid="8fc2194d-dc45-446f-b0b8-6ac84f25dba4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="61" width="328" height="20" uuid="23de51df-d852-458e-9ca1-c994cef3ce80"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agregar_alumnos_direccion_a}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="190" width="555" height="1" uuid="8077fcaa-b011-4654-8647-e722281f55bf"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="81" width="100" height="20" uuid="f2c599c8-7be6-4f98-b6d4-17c88b48f883"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Grado electivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="81" width="297" height="20" uuid="ee90b1e4-4b5c-4df4-af26-3bf0d238f84c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricula_grado_electivo_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="297" y="0" width="100" height="20" uuid="78aa0432-cfed-4aa6-8dfe-5e6fe455a437"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Padres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="21" width="158" height="20" uuid="0a4c9f05-5d5f-4cbf-928d-03fd4bf258d5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nombres Padre/Madre:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="21" width="100" height="20" uuid="c466e0de-2f89-43e6-91df-6c054a3a23a1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricula_nombre_p_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="297" y="41" width="158" height="20" uuid="cc447883-84b5-4105-ba84-46848dc0211d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Apellido Padre/Madre:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="41" width="100" height="20" uuid="c34d00ea-9a02-48fc-85fb-0f9f8f4956ab"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{matricula_nombre_m_m}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="100" height="20" uuid="b0fca9bf-dd2c-4a54-9005-b3ecf89a1522"/>
+				<text><![CDATA[MATRICULA AÑO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="11" width="100" height="20" uuid="68d8b798-1e06-4574-8473-d7f7e9bd958c"/>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="11" width="100" height="20" uuid="029b812e-4602-43e0-ade4-213ec4df7485"/>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="100" height="20" uuid="ab0f3753-7bf5-45a8-b202-28e82b5ab029"/>
+				<text><![CDATA[Año 2023]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="47" width="100" height="20" uuid="46ecf31a-406a-4cfe-bd2f-10574a26a146"/>
+				<text><![CDATA[120.00]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="47" width="100" height="20" uuid="7fa8e67c-faea-422d-aeaf-346c8960be3c"/>
+				<textFieldExpression><![CDATA[$F{matricula_estado_m}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="31" width="555" height="1" uuid="cc6d730d-b063-403a-a175-1bf7391386f7"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="213" y="14" width="80" height="20" uuid="759d2802-effa-444f-9e24-ae6f32b21d24"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="293" y="14" width="40" height="20" uuid="2ac91715-0203-493b-8f74-93c0bf988665"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
